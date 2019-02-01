@@ -12,7 +12,8 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
+          <span>COMING SOON</span>
+            {/* <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
             {posts
@@ -38,7 +39,7 @@ export default class IndexPage extends React.Component {
                     </Link>
                   </p>
                 </div>
-              ))}
+              ))} */}
           </div>
         </section>
       </Layout>
