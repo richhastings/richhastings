@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-          <span>COMING SOON (this is staging)</span>
+          <span>COMING SOON (this is staging...)</span>
             {/* <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
