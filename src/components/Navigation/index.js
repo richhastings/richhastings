@@ -20,7 +20,7 @@ const links = [
   }
 ]
 
-const NavigationLink = ({url, label, pathname, toggleNav}) => {
+const NavigationLink = ({url, label, pathname, toggleNav}) => {           
   if (url === pathname) {
     return <button className="NavigationLink" onClick={toggleNav}>{label}</button>
   } else {
