@@ -59,14 +59,15 @@ class NavComponent extends React.Component {
         <Icon type="Hamburger" />
       </button>
       <div className="inner">
-        {console.log(this.props.pathname)}
-        {links.map(link => (
-          <NavigationLink
-            {...link}
-            toggleNav={this.toggleNav}
-            pathname={this.props.pathname}
-          />
-        ))}
+        {this.state.isOpen &&
+          links.map(link => (   
+            <NavigationLink
+              {...link}
+              toggleNav={this.toggleNav}
+              pathname={this.props.pathname}
+            />
+          ))
+        }   
       </div>
     </nav>
   )}
