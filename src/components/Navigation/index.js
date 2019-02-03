@@ -58,7 +58,7 @@ class NavComponent extends React.Component {
       aria-label="main-navigation"
     >
       <button className="toggle" onClick={this.toggleNav}>
-        <Icon type="Hamburger" />
+        <Icon type="Hamburger" fill="white" />
       </button>
       <div className="inner">
         {this.state.isOpen &&

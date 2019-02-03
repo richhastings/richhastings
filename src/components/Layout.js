@@ -37,7 +37,7 @@ const TemplateWrapper = ({ children, pathname }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navigation pathname={pathname} />
-        <div>{children}</div>
+        {children}
       </Fragment>
     )}
   />

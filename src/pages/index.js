@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Panel from '../components/Panel'
+import Heading from '../components/Heading'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,11 +12,12 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout pathname={location.pathname}>
-        <section className="section">
-          <div className="container">
-            <span>COMING SOON</span>
-          </div>
-        </section>
+        <Panel>
+          <Heading level="1">Rich Hastings</Heading>
+        </Panel>
+        <Panel dark>
+          <Heading level="1">Rich Hastings</Heading>
+        </Panel>
       </Layout>
     )
   }

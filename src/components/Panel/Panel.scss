@@ -1,0 +1,14 @@
+.Panel {
+  display: grid;
+  height: 100vh;
+  text-align: center;
+  color: #eeb14a;
+  > * {
+    margin: auto;
+    padding: 10px
+  }
+}
+
+.Panel-dark {
+  background-color: #8b5e37
+}
