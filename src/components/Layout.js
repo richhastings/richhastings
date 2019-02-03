@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
-import Navbar from '../components/Navbar'
-import './all.sass'
+import Navigation from '../components/Navigation'
+import './all.scss'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, pathname }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children }) => (
         }
     `}
     render={data => (
-      <div>
+      <Fragment>
         <Helmet>
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
@@ -36,9 +36,9 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
-        <Navbar />
+        <Navigation pathname={pathname} />
         <div>{children}</div>
-      </div>
+      </Fragment>
     )}
   />
 )

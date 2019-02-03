@@ -12,7 +12,32 @@ export default class IndexPage extends React.Component {
       <Layout pathname={location.pathname}>
         <section className="section">
           <div className="container">
-            <span>COMING SOON</span>
+            <div className="content">
+              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            </div>
+            {posts
+              .map(({ node: post }) => (
+                <div
+                  className="content"
+                  key={post.id}
+                >
+                  <p>
+                    <Link className="has-text-primary" to={post.fields.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                    <span> &bull; </span>
+                    <small>{post.frontmatter.date}</small>
+                  </p>
+                  <p>
+                    {post.excerpt}
+                    <br />
+                    <br />
+                    <Link className="button is-small" to={post.fields.slug}>
+                      Keep Reading →
+                    </Link>
+                  </p>
+                </div>
+              ))}
           </div>
         </section>
       </Layout>
@@ -29,7 +54,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogListingQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}

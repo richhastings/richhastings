@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav,
+section, summary {
+  display: block
+}
+
+//
+// MEDIA
+//
+
+img {
+  vertical-align: bottom;
+  border: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+//
+// FORMS
+//
+
+input[type='submit'],
+input[type='reset'],
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none // http://stackoverflow.com/questions/11127891
+}
+
+// Stop Firefox making input(type='submit') taller than regular buttons
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+// Stop Firefox giving required inputs a red glow
+input:invalid {
+  box-shadow: none
+}
+
+button {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible; // removes padding in IE
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
