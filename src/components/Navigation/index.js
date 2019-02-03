@@ -24,7 +24,7 @@ const NavigationLink = ({url, label, pathname, toggleNav}) => {
   if (url === pathname) {
     return <button className="NavigationLink" onClick={toggleNav}>{label}</button>
   } else {
-    return <Link className="NavigationLink" to={url}>{label}</Link>
+    return <Link className="NavigationLink" onClick={toggleNav} to={url}>{label}</Link>
   }
 }
 
@@ -42,6 +42,8 @@ class NavComponent extends React.Component {
   toggleNav () {
     this.setState({
       isOpen: !this.state.isOpen
+    }, () => {
+      document.body.style.overflow = this.state.isOpen ? 'hidden' : 'auto'
     })
   }
 
